@@ -55,3 +55,32 @@ public class Fibonacci {
 	}
 
 }
+
+/*
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+RASCUNHO FEITO ANTES DE PASSAR PARA A IDE
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+duas variaveis
+
+A vai guardar o primeiro numero
+B vai guardar o segundo numero
+
+MENOR
+MAIOR
+SOMA
+
+soma MENOR + MAIOR = SOMA
+
+MENOR = MAIOR
+MAIOR = SOMA
+
+// soma sempre vai ser somada nela mesma
+
+repetir laco
+
+
+
+
+Obs: com esse rascunho somente passei para a IDE e nao precisei de nenhum ajuste
+
+*/
