@@ -42,3 +42,29 @@ public class Fatorial {
 	}
 
 }
+
+/*
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+RASCUNHO FEITO ANTES DE PASSAR PARA A IDE
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//variaveis
+NUMERO
+ANTECESSOR = NUMERO - 1
+CONTINUAR_LAÇO = true
+
+pegar o numero NUMERO e multiplicar ele por todos os antecessores dele
+
+então:
+if(ANTECESSOR FOR MENOR QUE 1){
+CONTINUAR LACO = false
+}
+NUMERO = NUMERO * ANTECESSOR
+ANTECESSOR -1
+
+REPETIR LACO
+
+
+
+Obs: No final das contas, tive que fazer alguns ajustes no código para que funcionasse certinho
+
+*/
