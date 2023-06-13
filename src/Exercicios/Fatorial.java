@@ -8,7 +8,9 @@ package Exercicios;
  * 0. O fatorial de um número é a multiplicação desse número por todos os seus
  * antecessores maiores que zero
  * 
- * exemplos 0! = 1 <br>
+ * exemplos
+ * 
+ * 0! = 1 <br>
  * 1! = 1 <br>
  * 2! = 2 . 1 = 2 <br>
  * 3! = 3 . 2 . 1 = 6 <br>
@@ -26,45 +28,49 @@ package Exercicios;
 public class Fatorial {
 
 	public static void main(String[] args) {
-		int numero = 10, antecessor = numero - 1, multiplicacao = 0;
+		int numero = 1, antecessor = numero - 1, multiplicacao = 0;
 
 		multiplicacao = numero * antecessor;
 		antecessor--;
 		while (true) {
+			if (numero == 0) {
+				System.out.println("O fatorial de " + numero + "! eh = " + 1);
+				break;
+			}
+			if (numero == 1) {
+				System.out.println("O fatorial de " + numero + "! eh = " + 1);
+			}
 			if (antecessor < 1) {
 				break;
 			}
 			multiplicacao *= antecessor;
 			antecessor--;
 		}
-
-		System.out.println("O fatorial de " + numero + "! eh = " + multiplicacao);
+		if (numero != 0 && numero != 1) {
+			System.out.println("O fatorial de " + numero + "! eh = " + multiplicacao);
+		}
 	}
 
 }
 
 /*
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-RASCUNHO FEITO ANTES DE PASSAR PARA A IDE
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//variaveis
-NUMERO
-ANTECESSOR = NUMERO - 1
-CONTINUAR_LAÇO = true
-
-pegar o numero NUMERO e multiplicar ele por todos os antecessores dele
-
-então:
-if(ANTECESSOR FOR MENOR QUE 1){
-CONTINUAR LACO = false
-}
-NUMERO = NUMERO * ANTECESSOR
-ANTECESSOR -1
-
-REPETIR LACO
-
-
-
-Obs: No final das contas, tive que fazer alguns ajustes no código para que funcionasse certinho
-
-*/
+ * -----------------------------------------------------------------------------
+ * -----------------------------------------------------------------------------
+ * --------- RASCUNHO FEITO ANTES DE PASSAR PARA A IDE
+ * -----------------------------------------------------------------------------
+ * -----------------------------------------------------------------------------
+ * --------- //variaveis NUMERO ANTECESSOR = NUMERO - 1 CONTINUAR_LAÇO = true
+ * 
+ * pegar o numero NUMERO e multiplicar ele por todos os antecessores dele
+ * 
+ * então: if(ANTECESSOR FOR MENOR QUE 1){ CONTINUAR LACO = false } NUMERO =
+ * NUMERO * ANTECESSOR ANTECESSOR -1
+ * 
+ * REPETIR LACO
+ * 
+ * 
+ * 
+ * Obs: No final das contas, tive que fazer alguns ajustes no código para que
+ * funcionasse certinho
+ * 
+ */

@@ -1,7 +1,5 @@
 package Exercicios;
 
-import javax.swing.JOptionPane;
-
 /**
  * Este algoritimo é capaz de verificar o quanto que foi doado de uma empresa
  * para uma ONG sera investido nas despesas
