@@ -1,4 +1,4 @@
-package Aulas.poo;
+package Aulas.a03;
 
 public class ContaTeste {
 
@@ -6,13 +6,16 @@ public class ContaTeste {
 
 		Cliente miguel = new Cliente("Miguel", "1231023810", "2198129312312", "Rua Adalto Fernandez, 283");
 		Cliente fabio = new Cliente("Fabio", "312312923", "182381723781", "Rua Emancipado de Oliveira, 423");
-		Conta contaMiguel = new ContaCorrente(miguel, 1234, 9876, "senha", 500);
-		Conta contaFabio = new ContaCorrente(fabio, 1235, 9876, "senha", 500);
+		Conta contaMiguel = new Conta(miguel, 1234, 9876, "senha");
+		Conta contaFabio = new Conta(fabio, 1235, 9876, "senha");
+
+		// simulações
 
 		System.out.println("----------------- Depositando ----------------");
+		// depositar
 		contaFabio.depositar(10000);
 		contaMiguel.depositar(20000);
-
+		// exibir
 		contaFabio.exibirSaldo();
 		contaMiguel.exibirSaldo();
 
