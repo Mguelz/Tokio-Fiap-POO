@@ -1,6 +1,6 @@
 package Aulas.poo;
 
-import java.sql.Date;
+import java.util.Date;
 
 public abstract class Conta {
 
@@ -9,6 +9,7 @@ public abstract class Conta {
 	protected Date dataAbertura;
 	protected double saldo;
 	protected Cliente cliente; // composição // todos os dados do cliente esta nesta "variavel/objeto"
+	private static long contador; // private porque será utilizado apenas nesta classe
 
 	// construtor
 	public Conta(Cliente cliente, int numeroConta, int agencia, String senha) {
@@ -19,6 +20,8 @@ public abstract class Conta {
 		this.dataAbertura = new Date(System.currentTimeMillis()); // retorna data do sistema operacional
 		System.out.println("Conta criada");
 		System.out.println("Data de abertura: " + this.dataAbertura);
+		contador++; // toda vez que uma conta for criada aumentará esta variavel, assim sabera
+					// quantas contas foram criadas
 	}
 
 	// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -102,6 +105,10 @@ public abstract class Conta {
 
 	public abstract void exibirSaldo(); // método abstrato / a classe filha terá que compor este método
 
+	public static void exibirContador() {
+		System.out.println("Contas Criadas " + contador);
+	}
+
 //	@Override
 //	public String toString() {
 //		return "saldo da conta " + saldo;
@@ -117,4 +124,11 @@ public abstract class Conta {
  * associação opcional ex: multimídia, ar-condicionado
  * 
  * Abstract: proibe a istancia da classe
+ * 
+ * Herança: a classe filha herdará todos os atributos e métodos da classe mae
+ * 
+ * 
+ * Quando a variavel for usada apenas na classe, ela é private
+ * 
+ * Quando a variavel for usada em classes filhas, ela será protected
  */

@@ -2,25 +2,25 @@ package Aulas.poo;
 
 // quando a classe tem apenas os atributos/contrutores/getters and setters é chamada de classe JavaBeans
 public class Cliente {
-	private String nomeTutular, cpfTitular, rgTitular, enderecoTitular;
+	private String nomeTitular, cpfTitular, rgTitular, enderecoTitular;
 
 	// contrutor vazio
 	public Cliente() {
 	}
 
 	public Cliente(String nomeTutular, String cpfTitular, String rgTitular, String enderecoTitular) {
-		this.nomeTutular = nomeTutular;
+		this.nomeTitular = nomeTutular;
 		this.cpfTitular = cpfTitular;
 		this.rgTitular = rgTitular;
 		this.enderecoTitular = enderecoTitular;
 	}
 
 	public String getNomeTutular() {
-		return nomeTutular;
+		return nomeTitular;
 	}
 
 	public void setNomeTutular(String nomeTutular) {
-		this.nomeTutular = nomeTutular;
+		this.nomeTitular = nomeTutular;
 	}
 
 	public String getCpfTitular() {
