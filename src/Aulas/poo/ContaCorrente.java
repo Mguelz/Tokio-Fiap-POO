@@ -34,17 +34,22 @@ public class ContaCorrente extends Conta {
 	public void exibirSaldo() {
 		double saldoTotal = this.saldo + this.saldoInvestimento;
 
-		System.out.println("Cliente: " + this.cliente.getNomeTutular() + " - saldo: " + this.saldo);
+		System.out.println("Cliente: " + this.cliente.getNome() + " - saldo: " + this.saldo);
 		System.out.println("Saldo de Investimento: " + this.saldoInvestimento);
 		System.out.println("Saldo Total: " + saldoTotal);
 	}
 
 	public void investimento(Produto produto, Double valor) {
 		boolean teste = this.sacar(valor);
-		if(teste == true) {
+		if (teste == true) {
 			this.saldoInvestimento += produto.investir(valor);
 		}
-		
+
+	}
+
+	@Override
+	public String toString() {
+		return "Conta Corrente [ saldo de investimento: " + saldoInvestimento + " ]";
 	}
 
 }

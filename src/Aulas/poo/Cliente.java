@@ -1,50 +1,84 @@
 package Aulas.poo;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 // quando a classe tem apenas os atributos/contrutores/getters and setters é chamada de classe JavaBeans
 public class Cliente {
-	private String nomeTitular, cpfTitular, rgTitular, enderecoTitular;
+	private String nome, cpf, rg, endereco;
+	private final Date dataNascimento; // constante
 
 	// contrutor vazio
 	public Cliente() {
+		this.dataNascimento = new Date();
 	}
 
-	public Cliente(String nomeTutular, String cpfTitular, String rgTitular, String enderecoTitular) {
-		this.nomeTitular = nomeTutular;
-		this.cpfTitular = cpfTitular;
-		this.rgTitular = rgTitular;
-		this.enderecoTitular = enderecoTitular;
+	// TODO adicionar os outros atributos ao construtor (cpf, rg, endereco)
+	public Cliente(String nomeTitular, String cpf, String rg, String enderecoTitular, String dataNasc)
+			throws ParseException {
+		this.nome = nomeTitular;
+		this.cpf = cpf;
+		this.rg = rg;
+		this.endereco = enderecoTitular;
+		SimpleDateFormat format = new SimpleDateFormat("dd/mm/yyyy");
+		this.dataNascimento = format.parse(dataNasc); // ira pegar o String e irá formatar para o tipo Date
 	}
 
-	public String getNomeTutular() {
-		return nomeTitular;
+	// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	public String getNome() {
+		return nome;
 	}
 
-	public void setNomeTutular(String nomeTutular) {
-		this.nomeTitular = nomeTutular;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public String getCpfTitular() {
-		return cpfTitular;
+	public String getCpf() {
+		return cpf;
 	}
 
-	public void setCpfTitular(String cpfTitular) {
-		this.cpfTitular = cpfTitular;
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 
-	public String getRgTitular() {
-		return rgTitular;
+	public String getRg() {
+		return rg;
 	}
 
-	public void setRgTitular(String rgTitular) {
-		this.rgTitular = rgTitular;
+	public void setRg(String rg) {
+		this.rg = rg;
 	}
 
-	public String getEnderecoTitular() {
-		return enderecoTitular;
+	public String getEndereco() {
+		return endereco;
 	}
 
-	public void setEnderecoTitular(String enderecoTitular) {
-		this.enderecoTitular = enderecoTitular;
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
 	}
 
+	public Date getDataNascimento() {
+		return dataNascimento;
+	}
+
+	// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
+
+/*
+ * 
+ * A classe Cliente é uma composição da classe Conta (isso é uma associação)
+ * 
+ * Uma conta só existe se ouver
+ * 
+ * Um cliente Um cliente pode ter apenas uma conta
+ * 
+ * Ao adicionar a classe Date no construtor é preciso
+ * "propagar este possível "erro" colocando o "throws
+ * ParseException" depois dos argumentos do constutor"
+ * 
+ * 
+ * 
+ * 
+ */
