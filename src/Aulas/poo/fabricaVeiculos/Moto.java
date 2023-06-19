@@ -1,5 +1,36 @@
 package Aulas.poo.fabricaVeiculos;
 
-public class Moto extends Veiculo{
+import java.text.ParseException;
+
+public class Moto extends Veiculo {
+
+	public Moto(String marca, String cor, String modelo, String tipoCombustivel, String anoFabricacao,
+			int limiteVeiculo) throws ParseException {
+		super(marca, cor, modelo, tipoCombustivel, anoFabricacao, limiteVeiculo);
+	}
+
+	@Override
+	public boolean verificarSeEstaLigado(boolean valor) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void acelerar(int qtdParaAcelerar, boolean ligadoDesligado, int velocidadeAtual) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void frear(int qtdParaFrear, boolean ligadoDesligado, int velocidade) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void mostrarDados(int velocidade) {
+		// TODO Auto-generated method stub
+
+	}
 
 }
