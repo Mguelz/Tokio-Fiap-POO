@@ -57,7 +57,7 @@ public class ContaCorrente extends Conta {
 /*
  * strategy - dessign pattern, para redução de IFs
  * 
- * 
+ *
  * 
  * investir ifs -
  * 
