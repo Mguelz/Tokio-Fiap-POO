@@ -76,14 +76,18 @@ public abstract class Conta {
 
 	// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	public boolean sacar(double valor) {
+	public boolean sacar(double valor) throws SaldoInsuficiente {
 		if (valor > 0) { // nao pode sacar 0 reais
 			if (this.saldo >= valor) {
 				this.saldo -= valor;
+				System.out.println("sacou");
 				return true;
 			}
 		}
-		return false;
+		throw new SaldoInsuficiente("Saldo Insuficiente, tente novamente!"); // trata aqui, e continua o código, mas no
+																				// executavel precisa tratar cada
+																				// operacao
+//		return false;
 	}
 
 	public void depositar(double valor) {
@@ -92,7 +96,7 @@ public abstract class Conta {
 		}
 	}
 
-	public void transferir(Conta conta, double valor) {
+	public void transferir(Conta conta, double valor) throws SaldoInsuficiente {
 		boolean teste = this.sacar(valor);
 
 		if (valor > 0) {

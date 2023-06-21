@@ -1,18 +1,28 @@
-package Aulas.poo.fabricaVeiculos;
+package Aulas.a05;
+
+/**
+ * 
+ * @author Felipi 
+ * @author Guilherme 
+ * @author Ikram
+ * @author Isabelle
+ * @author Miguel 
+ *
+ */
 
 public class Roda {
-
-	// Atributos
+	
+	//Atributos
 	private String cor, marca;
 	private double pesoSuportado, largura, diametro;
 	private int qntdRodas;
-
-	// Construtor vazio
+	
+	//Construtor vazio
 	public Roda() {
-
+		
 	}
-
-	// Construtor
+	
+	//Construtor
 	public Roda(String cor, String marca, double pesoSuportado, double largura, double diametro, int qntdRodas) {
 		this.cor = cor;
 		this.marca = marca;
@@ -22,7 +32,7 @@ public class Roda {
 		this.qntdRodas = qntdRodas;
 	}
 
-	// Getters/setters
+	//Getters/setters
 	public String getCor() {
 		return cor;
 	}
@@ -70,4 +80,12 @@ public class Roda {
 	public void setQntdRodas(int qntdRodas) {
 		this.qntdRodas = qntdRodas;
 	}
+
+	@Override
+	public String toString() {
+		return "\n\nRoda: " + "\nCor - " + cor + "\nMarca - " + marca + "\nPeso suportado - " + pesoSuportado + "\nLargura - " + largura + "\nDiametro - " + diametro + "\nQuantidade de rodas - " + qntdRodas;
+	}
+
+	
+	
 }

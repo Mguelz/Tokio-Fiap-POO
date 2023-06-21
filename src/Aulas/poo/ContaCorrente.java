@@ -39,7 +39,7 @@ public class ContaCorrente extends Conta {
 		System.out.println("Saldo Total: " + saldoTotal);
 	}
 
-	public void investimento(Produto produto, Double valor) {
+	public void investimento(Produto produto, Double valor) throws SaldoInsuficiente {
 		boolean teste = this.sacar(valor);
 		if (teste == true) {
 			this.saldoInvestimento += produto.investir(valor);

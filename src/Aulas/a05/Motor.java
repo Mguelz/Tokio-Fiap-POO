@@ -1,4 +1,14 @@
-package Aulas.poo.fabricaVeiculos;
+package Aulas.a05;
+
+/**
+ * 
+ * @author Felipi 
+ * @author Guilherme 
+ * @author Ikram
+ * @author Isabelle
+ * @author Miguel 
+ *
+ */
 
 public class Motor {
 	private String tipoMotor, tipoCombustivel, potencia;
@@ -7,15 +17,14 @@ public class Motor {
 	public Motor() {
 	}
 
-	public Motor(String tipoMotor, String tipoCombustivel, String potencia, int qtdLitros, int cilindrada, int torque) {
+	public Motor(String tipoMotor, String tipoCombustivel, int qtdLitros, int cilindrada, int torque) {
 		this.tipoMotor = tipoMotor;
 		this.tipoCombustivel = tipoCombustivel;
-		this.potencia = potencia;
 		this.qtdLitros = qtdLitros;
 		this.cilindrada = cilindrada;
 		this.torque = torque;
 	}
-
+	
 	public String getTipoMotor() {
 		return tipoMotor;
 	}
@@ -64,4 +73,11 @@ public class Motor {
 		this.torque = torque;
 	}
 
+	@Override
+	public String toString() {
+		return "\n\nMotor: " + "\nTipo do motor - " + tipoMotor + "\nTipo de combustivel - " + tipoCombustivel + "\nPotencia do motor - " + potencia 
+				+ "\nQuantidade de litros - " + qtdLitros +  "\nCilindrada - " +  cilindrada +  "\nTorque - " + torque;
+	}
+	
+	
 }
