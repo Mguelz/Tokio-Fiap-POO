@@ -44,8 +44,10 @@ public class Application {
 		carro.acelerar(150, ligadoDesligado, carro.getVelocidadeAtual());
 		carro.frear(10, ligadoDesligado, carro.getVelocidadeAtual());
 		carro.abastecimento(alcool, 10);
-		carro.abastecimento(gasolina, 100);
-		System.out.println(carro.tipoDeCombustivel);
+		carro.abastecimento(gasolina, 10);
+		carro.abastecimento(gasolina, 20);
+		carro.abastecimento(gasolina, 1);
+//		System.out.println(carro.tipoDeCombustivel);
 //		carro.mostrarDados();
 
 //		// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

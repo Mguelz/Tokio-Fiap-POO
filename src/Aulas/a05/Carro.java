@@ -117,21 +117,21 @@ public class Carro extends Veiculo {
 	 * @param qtdDesejada
 	 */
 	public void abastecimento(Combustivel tipoCombustivel, double qtdDesejada) {
-		double rendimentoTotal = 0;
-		if (this.qtdNoTanque + qtdDesejada > 0) { // verifica a quantidade que tem no tanque + a quantidade para abastecimento
+		double rendimentoDoAbastecimento = 0;
+		if (this.qtdNoTanque + qtdDesejada > 0 && qtdNoTanque + qtdDesejada <= this.tanque) { // verifica a quantidade que tem no tanque + a quantidade para abastecimento
 			this.qtdNoTanque += qtdDesejada;
-			rendimentoTotal += tipoCombustivel.abastecer(qtdDesejada);
-			System.out.println("\nCapacidade maxima de rodagem - " + rendimentoTotal + "Km/h");
-			System.out.println("Quantidade no tanque " + this.qtdNoTanque);
-			System.out.println("Quantidade de combustivel abastecido " + qtdDesejada);
+			rendimentoDoAbastecimento += tipoCombustivel.abastecer(qtdDesejada);
+			this.rendimentoTotal += rendimentoDoAbastecimento;
+			System.out.println("\nQuantidade de combustivel abastecido --> " + qtdDesejada);
+			System.out.println("Capacidade maxima de rodagem do abastecimento --> " + rendimentoDoAbastecimento + "Km/h");
+			System.out.println("Rodagem total do carro --> " + rendimentoTotal + "Km/h");
+			System.out.println("Quantidade no tanque --> " + this.qtdNoTanque);
 		} else {
+			System.out
+					.println("\nA capacidade maxima do tanque eh de: " + tanque + " Litros, voce excedeu a capacidade!");
 			verificarSeEstaLigado(false); // desligar o carro se o combustivel chegar a 0
 		}
 
 	}
-	
-	
 
 }
-
-
