@@ -80,11 +80,13 @@ public abstract class Conta {
 		if (valor > 0) { // nao pode sacar 0 reais
 			if (this.saldo >= valor) {
 				this.saldo -= valor;
-				System.out.println("sacou");
+				System.out.println("sacou " + valor);
 				return true;
 			}
 		}
-		throw new SaldoInsuficiente("Saldo Insuficiente, tente novamente!"); // trata aqui, e continua o código, mas no executavel precisa tratar cada operacao
+		throw new SaldoInsuficiente("Saldo Insuficiente, tente novamente!"); // trata aqui, e continua o código, mas no
+																				// executavel precisa tratar cada
+																				// operacao
 //		return false;
 	}
 
@@ -92,7 +94,7 @@ public abstract class Conta {
 		if (valor > 0) {
 			this.saldo += valor;
 		}
-		
+
 	}
 
 	public void transferir(Conta conta, double valor) throws SaldoInsuficiente {

@@ -69,8 +69,7 @@ public class Application {
 		System.out.println(contaFabio);
 		System.out.println(fabio);
 
-		Cliente rodrigo = new Cliente("Rodrigo", "1231023810", "2198129312312", "Rua Adalto Fernandez, 283",
-				"10/12/2004");
+		Cliente rodrigo = new Cliente("Rodrigo", "1231023810", "2198129312312", "Rua Adalto Fernandez, 283", "10/12/2004");
 		ContaCorrente contaRodrigo = new ContaCorrente(rodrigo, 1234, 9876, "senha", 0);
 		contaRodrigo.depositar(100);
 		try {
