@@ -7,25 +7,32 @@ import java.util.List;
 
 public class Usuario {
 
-	private static List<Usuario> listaUsuario = new ArrayList<Usuario>();
-	
 	public static void main(String[] args) {
-		Usuario usuario[] = new Usuario[2];
-		usuario[0] = new Usuario(1, "Miguel", "miguel@gmail.com", "miguel123");
-		usuario[1] = new Usuario(2, "Aluisio", "aluisio@gmail.com", "aluisio123");
+//		Usuario usuario[] = new Usuario[2];
+//		usuario[0] = new Usuario(1, "Miguel", "miguel@gmail.com", "miguel123");
+//		usuario[1] = new Usuario(2, "Aluisio", "aluisio@gmail.com", "aluisio123");
+//
+//		for (int i = 0; i < usuario.length; i++) {
+//			System.out.println("Nome: " + usuario[i].getNome());
+//			System.out.println(" Senha: " + usuario[i].getSenha());
+//			System.out.println(" Email: " + usuario[i].getEmail());
+//			System.out.println(" Abertura da Conta: " + usuario[i].getDataCadastro());
+//			System.out.println("");
+//		}
 
-		for (int i = 0; i < usuario.length; i++) {
-			System.out.println("Nome: " + usuario[i].getNome());
-			System.out.println(" Senha: " + usuario[i].getSenha());
-			System.out.println(" Email: " + usuario[i].getEmail());
-			System.out.println(" Abertura da Conta: " + usuario[i].getDataCadastro());
-			System.out.println("");
-		}
+		// adicionando dados para a Lista de Usuarios
+		listaUsuario.add(new Usuario(1, "miguel", "miguel@gmail.com", "miguel123"));
+		listaUsuario.add(new Usuario(2, "guilherme", "guilherme@gmail.com", "guilherme123"));
+		listaUsuario.add(new Usuario(3, "matheus", "matheus@gmail.com", "matheus123"));
+		listaUsuario.add(new Usuario(4, "ikram", "ikram@gmail.com", "ikram123"));
+
+		removerUsuario("matheus");
 	}
 
 	private int id;
 	private String nome, email, telefone, senha;
 	private Date dataCadastro;
+	private static List<Usuario> listaUsuario = new ArrayList<Usuario>();
 
 	public Usuario(int id, String nome, String email, String senha) {
 		this.id = id;
@@ -87,13 +94,15 @@ public class Usuario {
 	public String toString() {
 		return "[id = " + id + ", nome = " + nome + ", email = " + email + ", senha = " + senha + "]";
 	}
-	
+
 	public static List<Usuario> removerUsuario(String nome) {
+		System.out.println("Entrou no método de remover usuario");
 		Iterator<Usuario> iterator = listaUsuario.iterator(); // recebe a lista atualizada
 		while (iterator.hasNext()) {
 			Usuario usuario = iterator.next();
 			if (usuario.getNome().equals(nome)) {
 				iterator.remove();
+				System.out.println("Removendo o usuario: " + nome);
 			}
 		}
 		return listaUsuario;

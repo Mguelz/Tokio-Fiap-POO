@@ -7,32 +7,34 @@ import java.util.List;
 public class Collection {
 	public static void main(String[] args) {
 		// lista tipo String
-		List<String> lista = new ArrayList<String>();
-		lista.add("Miguel");
-		lista.add("Matheus");
-		lista.add("Guilherme");
-		lista.add("Jessica");
-		lista.add("Ikram");
-		lista.add("Isabelle");
+//		List<String> lista = new ArrayList<String>();
+//		lista.add("Miguel");
+//		lista.add("Matheus");
+//		lista.add("Guilherme");
+//		lista.add("Jessica");
+//		lista.add("Ikram");
+//		lista.add("Isabelle");
 
 		// lista tipo Usuario
 		List<Usuario> listaUsuario = new ArrayList<Usuario>();
 		Usuario jessica = new Usuario(4, "jessica", "jessica@gmail.com", "jessica123");
-		Usuario ikram = new Usuario(5, "ikram ", "ikram @gmail.com", "ikram 123");
-		
+		Usuario ikram = new Usuario(5, "ikram", "ikram @gmail.com", "ikram 123");
+
 		listaUsuario.add(new Usuario(1, "miguel", "miguel@gmail.com", "miguel123"));
 		listaUsuario.add(new Usuario(2, "guilherme", "guilherme@gmail.com", "guilherme123"));
 		listaUsuario.add(new Usuario(3, "matheus", "matheus@gmail.com", "matheus123"));
 		// ou
 		listaUsuario.add(jessica);
 		listaUsuario.add(ikram);
-		removerUsuario(listaUsuario, "ikram");
-		
+
 		System.out.println("fim");
 
 		// imprimindo as collections
 //		imprimirListString(lista);
 //		imprimirListUsuario(listaUsuario);
+
+		removerUsuario(listaUsuario, "ikram"); // removendo um nome da collection listaUsuario
+		imprimirListUsuario(listaUsuario);
 
 	}
 
@@ -59,11 +61,13 @@ public class Collection {
 //		return listaUsuario;
 //	}
 	public static List<Usuario> removerUsuario(List<Usuario> listaUsuario, String nome) {
+		System.out.println("Entrou no método de remover usuario");
 		Iterator<Usuario> iterator = listaUsuario.iterator();
 		while (iterator.hasNext()) {
 			Usuario usuario = iterator.next();
 			if (usuario.getNome().equals(nome)) {
 				iterator.remove();
+				System.out.println("Removendo o usuario: " + nome);
 			}
 		}
 		return listaUsuario;
