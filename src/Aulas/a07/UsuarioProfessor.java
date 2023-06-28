@@ -6,21 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * 
- * 
- * 
- * 
- * PEGAR ESSA CLASSE QUE ALGUEM FEZ (PQP)
- * 
- * 
- * 
- * @author Miguel
- *
- */
 public class UsuarioProfessor implements Comparable<Usuario> {
-	static Map<Object, Object> mapa = new HashMap<Object, Object>();// Não é declarado nenhum tipo pois o map pode
-																	// guardar diversos tipos.
+	static Map<Object, Object> mapa = new HashMap<Object, Object>();// Não é declarado nenhum tipo pois o map pode guardar diversos tipos.
 
 	public static void main(String[] args) {
 		System.out.println("---------- Lista Desordenada -------------");
@@ -47,9 +34,8 @@ public class UsuarioProfessor implements Comparable<Usuario> {
 		for (Usuario usuario : listaUsuario) {
 			System.out.println("Id: " + usuario.getIdUsuario() + " -- Nome: " + usuario.getNome());
 		}
-		
-		System.out.println("\n---------- Usuario Recuperado ----------------");
 
+		System.out.println("\n---------- Usuario Recuperado ----------------");
 
 		Map<String, Usuario> map = new HashMap<String, Usuario>();
 
@@ -105,9 +91,4 @@ public class UsuarioProfessor implements Comparable<Usuario> {
 		return 0;
 	}
 
-//	public static void recuperaUsuario() {
-//		Object objeto = mapa.get(this.getId());
-//		Usuario usuario = (Usuario) objeto;
-//		System.out.println("O usuario selecionado foi: " + usuario.getNome());
-//	}
 }
