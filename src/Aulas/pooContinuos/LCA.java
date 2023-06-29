@@ -1,4 +1,4 @@
-package Aulas.poo;
+package Aulas.pooContinuos;
 
 public class LCA implements Produto {
 
