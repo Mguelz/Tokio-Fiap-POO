@@ -49,7 +49,7 @@ public class TextAreaFrame extends JFrame {
 		setContentPane(contentPane);
 
 		Box box = Box.createHorizontalBox();
-		String string = "Isto � um texto demonstrativo para ser copiado";
+		String string = "Isto eh um texto demonstrativo para ser copiado";
 		textArea1 = new JTextArea(string, 10, 15);
 
 		box.add(new JScrollPane(textArea1));
